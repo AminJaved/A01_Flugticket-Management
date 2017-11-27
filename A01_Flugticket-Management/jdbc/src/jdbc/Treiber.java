@@ -13,11 +13,11 @@ public class Treiber {
 			Statement stm = con.createStatement();
 			
 			//SQL query ausführen
-			ResultSet rs = stm.executeQuery(null);
+			ResultSet rs = stm.executeQuery("SELECT * FROM airlines");
 					
 			//ResultSet bearbeiten
 			while(rs.next()) {
-				//Mach etwas
+				System.out.println(rs.getString("name"));
 			}
 		}
 		catch (Exception ex) {
